@@ -82,6 +82,56 @@ function MatrixOperation() {
     setResult(newResult);
   };
 
+  // Handling state for placeholder in rows and columns for Matrix A
+
+  const [showRowsPlaceholder, setShowRowsPlaceholder] = useState(true);
+  const [showColumnsPlaceholder, setShowColumnsPlaceholder] = useState(true);
+
+  const handleRowsFocus = () => {
+    setShowRowsPlaceholder(false);
+  };
+
+  const handleRowsBlur = () => {
+    if (rows1 === 0 || isNaN(rows1)) {
+      setShowRowsPlaceholder(true);
+    }
+  };
+
+  const handleColumnsFocus = () => {
+    setShowColumnsPlaceholder(false);
+  };
+
+  const handleColumnsBlur = () => {
+    if (columns1 === 0 || isNaN(columns1)) {
+      setShowColumnsPlaceholder(true);
+    }
+  };
+
+  // Handling state for placeholder in rows and columns for Matrix B
+
+  const [showRows2Placeholder, setShowRows2Placeholder] = useState(true);
+  const [showColumns2Placeholder, setShowColumns2Placeholder] = useState(true);
+
+  const handleRows2Focus = () => {
+    setShowRows2Placeholder(false);
+  };
+
+  const handleRows2Blur = () => {
+    if (rows2 === 0 || isNaN(rows2)) {
+      setShowRows2Placeholder(true);
+    }
+  };
+
+  const handleColumns2Focus = () => {
+    setShowColumns2Placeholder(false);
+  };
+
+  const handleColumns2Blur = () => {
+    if (columns2 === 0 || isNaN(columns2)) {
+      setShowColumns2Placeholder(true);
+    }
+  };
+
   return (
     <center>
       <div className="container">
@@ -91,30 +141,42 @@ function MatrixOperation() {
             <label htmlFor="">A: </label>
             <input
               type="number"
-              value={rows1}
+              value={showRowsPlaceholder ? "" : rows1}
+              onFocus={handleRowsFocus}
+              onBlur={handleRowsBlur}
               onChange={(e) => setRows1(parseInt(e.target.value) || 0)}
               className="input-RC"
+              placeholder="i"
             />
             <input
               type="number"
-              value={columns1}
+              value={showColumnsPlaceholder ? "" : columns1}
+              onFocus={handleColumnsFocus}
+              onBlur={handleColumnsBlur}
               onChange={(e) => setColumns1(parseInt(e.target.value) || 0)}
               className="input-RC"
+              placeholder="j"
             />
           </div>
           <div>
             <label htmlFor="">B: </label>
             <input
               type="number"
-              value={rows2}
+              value={showRows2Placeholder ? "" : rows2}
+              onFocus={handleRows2Focus}
+              onBlur={handleRows2Blur}
               onChange={(e) => setRows2(parseInt(e.target.value) || 0)}
               className="input-RC"
+              placeholder="i"
             />
             <input
               type="number"
-              value={columns2}
+              value={showColumns2Placeholder ? "" : columns2}
+              onFocus={handleColumns2Focus}
+              onBlur={handleColumns2Blur}
               onChange={(e) => setColumns2(parseInt(e.target.value) || 0)}
               className="input-RC"
+              placeholder="j"
             />
           </div>
           <div>

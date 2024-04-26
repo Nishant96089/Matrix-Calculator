@@ -1,7 +1,7 @@
 const Calculatorhead = () => {
   return (
     <center>
-      <h1 className="font-family">Matrix Calculator</h1>
+      <h1 className="font-family head">Matrix Calculator</h1>
     </center>
   );
 };
