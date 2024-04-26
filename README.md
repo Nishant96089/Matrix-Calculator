@@ -1,8 +1,26 @@
-# React + Vite
+# Matrix Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple matrix calculator web application built with React. Perform basic matrix operations such as addition, subtraction, and multiplication.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Input two matrices of any size
+- Add, subtract, and multiply matrices
+- View the result matrix
+
+## Technologies Used
+
+- React
+- HTML/CSS
+
+## How to Run
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Nishant96089/Matrix-Calculator.git
+
+- cd Matrix-Calculator
+- npm install
+- npm run dev
+
