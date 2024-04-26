@@ -2,6 +2,8 @@
 
 A simple matrix calculator web application built with React. Perform basic matrix operations such as addition, subtraction, and multiplication.
 
+Live Link : [https://matrix-calculator00.netlify.app/](https://matrix-calculator00.netlify.app/)
+
 ## Features
 
 - Input two matrices of any size
