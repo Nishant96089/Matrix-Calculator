@@ -18,7 +18,7 @@ A simple matrix calculator web application built with React. Perform basic matri
 1. Clone the repository:
 
    ```bash
-   git clone [[https://github.com/your-username/matrix-calculator.git](https://github.com/Nishant96089/Matrix-Calculator.git)]
+   git clone [[https://github.com/Nishant96089/Matrix-Calculator.git]]
 
 cd Matrix-Calculator
 npm install
